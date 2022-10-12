@@ -1,0 +1,106 @@
+.content{
+    /* background-color:aquamarine ; */
+   background-image: url(https://inc42.com/wp-content/uploads/2015/08/home-services.jpg);
+    height: 80vh;
+    padding: 20px;
+    text-align: center;
+    color: #f2f2f2;
+    
+    
+  
+  
+}
+.row{
+  margin-top: 70px;
+
+}
+.img:hover{
+  color:aquamarine
+
+}
+.footer{
+    background-color:#333;
+    color: #f2f2f2;
+    height:8vh;
+   
+    
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+
+  color: black;
+}
+
+.topnav-right{
+  float: right;
+}
+.main{
+  margin:auto;
+  margin-left:10px;
+  margin-right:40px;
+}
+.signup{
+  text-align: center;
+  height:85vh;
+
+ 
+}
+
+.login{
+  text-align: center;
+padding-top:10;
+  height: 80vh;
+}
+
+.more{
+  height: 60vh;
+  text-align: center;
+}
+.more1{
+  height: 80vh;
+  background-color: aquamarine;
+  text-align: center;
+}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+button{
+  width: 25%;
+  background-color: #04AA6D;
+  color: #f2f2f2;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  opacity:0.7;
+}
+input[type=text], input[type=password], input[type=email], input[type=mobile], input[type=usertype] 
+{
+  width:25%;
+  padding: 10px 20px; 
+}
+span.psw {
+  float: right;
+  padding-top: 50px;
+}
+.butt{
+  padding-right: 500px;
+}
+.serviceprovider{
+text-align: center;
+}

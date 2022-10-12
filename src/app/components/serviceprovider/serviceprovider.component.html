@@ -1,0 +1,85 @@
+<div class="serviceprovider">
+    <h1>serviceprovider</h1>
+    <form autocomplete="on" #providerForm="ngForm" (ngSubmit)="addProvider(providerForm)">
+        <div>
+            <label for="name"><b>NAME</b></label><br>
+            <input type="text" name="name" placeholder="enter name" ngModel>
+        </div>
+        <br>
+        <div>
+            <label for="description"><b>description</b></label><br>
+            <input type="text" name="description" placeholder="enter description" ngModel>
+        </div>
+        <br>
+        <div>
+            <label for="mobile"><b>MOBILE</b></label><br>
+            <input type="number" name="Contact" ngModel placeholder="enter number" required size="10">
+        </div><br>
+        <div>
+            <label for="email"><b>EMAIL</b></label><br>
+            <input type="email" name="Email" ngModel placeholder="enter email" required>
+        </div><br>
+        <div>
+            <label for="address"><b>address</b></label><br>
+            <input type="text" name="Address" ngModel placeholder="enter address">
+        </div><br>
+        <div>
+            <label for="location"><b>location</b></label><br>
+            <input type="text" name="Location" ngModel placeholder="enter location">
+        </div><br>
+
+        <div>
+            <label for="city"><b>city</b></label><br>
+            <input type="text" name="City" ngModel placeholder="enter city">
+        </div><br>
+        <div>
+            <label for="zip code"><b>zipcode</b></label><br>
+            <input type="number" name="Zipcode" ngModel placeholder="enter zip code">
+        </div><br>
+        <div>
+            <label for="website"><b>website</b></label><br>
+            <input type="text" name="website" ngModel placeholder="enter website">
+        </div><br>
+        <div>
+            <button type="submit">ADD</button>
+        </div> <br>
+    </form>
+</div>
+<div class="provider-list" *ngIf="allProviders.length">
+    <table border="1">
+        <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>ADDRESS</th>
+            <th>LOCATION</th>
+            <th>CITY</th>
+            <th>ZIPCODE</th>
+            <th>WEBSITE</th>
+            <!-- <th>Edit</th>
+                <th>Delete</th> -->
+        </thead>
+        <tr *ngFor="let provider of allProviders">
+            <td>{{provider.name}}</td>
+            <td>{{provider.description}}</td>
+            <td>{{provider.Contact}}</td>
+            <td>{{provider.Email}}</td>
+            <td>{{provider.Address}}</td>
+            <td>{{provider.Location}}</td>
+            <td>{{provider.City}}</td>
+            <td>{{provider.Zipcode}}</td>
+            <td>{{provider.website}}</td>
+            &nbsp;
+            <input type="button" value="edit" (click)="editService(provider,providerForm)" >
+            &nbsp;
+            <input type="button" value="delete" (click)="deleteService(provider.id)">
+
+        </tr>
+    </table>
+</div>
+<!-- <button (click)="editService(provider,providerForm)">edit</button>  
+                <button (click)="deleteService(provider.id)"> delete</button>   -->
+
+
+<!-- ❌ &#9998; -->

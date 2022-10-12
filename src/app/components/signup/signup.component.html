@@ -1,0 +1,59 @@
+<div class="signup">
+    <h1>Sign up</h1>
+    <form  #signform="ngForm" (ngSubmit)="signUpUser(signform)" >
+
+        <div >
+            <label for="name"><b>NAME</b></label><br>
+            <input type="text" name="name" id="name" [(ngModel)]="user.name" #fname="ngModel"
+                placeholder="enter name" size="15" required>
+        </div><br>
+        
+
+        <div >
+            <label for="password"><b>PASSWORD</b></label><br>
+            <input type="password" name="password" id="password" [(ngModel)]="user.password" #fpass="ngModel" 
+                placeholder="enter password" maxlength="8" minlength="6" required>
+        </div>
+        <br>
+        <div>
+            <label for="email"><b>EMAIL</b></label><br>
+            <input type="email" name="email" id="email" [(ngModel)]="user.email" #femail="ngModel" 
+                placeholder="enter email" required>
+        </div><br>
+        <div>
+            <label for="mobile"><b>MOBILE</b></label><br>
+            <input type="number" name="mobile" id="mobile" [(ngModel)]="user.mobile" #fmobile="ngModel" 
+                placeholder="enter number" required size="10">
+        </div><br>
+        
+        <div>
+
+            <label for="usertype"><b>USERTYPE</b></label><br>
+            <select name="usertype" id="usertype" [(ngModel)]="user.usertype" #fname="ngModel" required>
+                <option value="customer">CUSTOMER</option>
+                <option value="serviceprovider">SERVICEPROVIDER</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <!-- <input type="submit" value="Signup"> -->
+            <button type="submit">Signup</button>
+            <div *ngIf="msg.length>0">
+                {{msg}}
+            </div>
+        </div>
+        <br>
+        <!-- <div>
+            <div *ngIf="msg.length>0">
+                {{msg}}
+            </div>
+        </div> -->
+    </form>
+</div>
+
+
+
+<script>
+
+
+</script>

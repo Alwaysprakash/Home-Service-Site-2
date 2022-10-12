@@ -1,0 +1,47 @@
+<div class="container">
+<div class="login">
+
+    <h1>Login</h1>
+
+    <form #loginform="ngForm" (ngSubmit)="loginUser(loginform)">
+        
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email"  id="email" name="email" [(ngModel)]="user.email" #femail=ngModel  placeholder="Enter  Email"  required><br>
+        </div>
+        
+        <div>
+            <label for="password">Password</label><br>
+            <input type="password"  id="password" name="password" [(ngModel)]="user.password" #fpassword=ngModel  placeholder="Enter  Password" max="8" minlength="6" required><br>
+        </div>
+
+        <div>
+            <label for="usertype">User Type</label><br>
+            <select id="usertype" name="usertype" [(ngModel)]="user.usertype" #fusertype=ngModel required>
+                <option value="customer">Customer</option>
+                <option value="serviceprovider">Service Provider</option>
+            </select>
+        </div>
+<br>
+        <div>
+            <!-- <input type="submit" value="Login">             -->
+            <button type="submit">Login</button>
+            <br><br>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+        </div>
+    
+
+        <div class="butt">
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+   
+
+        <div *ngIf="msg.length>0">
+            {{msg}}            
+        </div>
+    </form>
+</div>
+</div>
